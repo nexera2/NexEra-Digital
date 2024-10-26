@@ -142,6 +142,8 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            max-width: 100%; /* Ensure button fits within its parent */
+            box-sizing: border-box; /* Include padding in width calculation */
         }
         
         .btn:hover {
@@ -149,8 +151,15 @@
         }
         
         /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack inputs vertically */
+            align-items: center; /* Center align */
+        }
+
         form input, form textarea {
             width: 100%;
+            max-width: 400px; /* Limit width on larger screens */
             padding: 15px;
             margin: 10px 0;
             border-radius: 5px;
@@ -164,6 +173,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            max-width: 100%; /* Ensure button fits within its parent */
+            box-sizing: border-box; /* Include padding in width calculation */
         }
         
         form button:hover {
