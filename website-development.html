@@ -74,25 +74,48 @@
             text-align: center;
             margin-top: 80px; /* To avoid overlap with fixed header */
         }
-        
+
         h2 {
             font-size: 36px;
             color: #1ae5ff;
             margin-bottom: 20px;
         }
-        
+
         p {
             font-size: 18px;
             line-height: 1.6;
+            margin-bottom: 20px;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #111;
+        /* Why Choose Us Section */
+        .why-choose-us {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
         }
-        
+
+        .reason {
+            background-color: #111;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            width: 280px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .reason h3 {
+            font-size: 24px;
+            color: #1ae5ff;
+            margin-bottom: 10px;
+        }
+
+        /* Call to Action */
+        .cta {
+            margin-top: 40px;
+            text-align: center;
+        }
+
         .btn {
             display: inline-block;
             background-color: #00e5ff;
@@ -100,10 +123,18 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 20px;
         }
 
         .btn:hover {
             background-color: #1ae5ff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111;
         }
     </style>
 </head>
@@ -127,9 +158,34 @@
     <!-- Content Section -->
     <section class="content">
         <h2>Website Development</h2>
-        <p>Your website is often the first interaction potential customers have with your business. At NexEra Digital, we specialize in creating custom-built websites tailored to your specific business needs. Our team ensures that each website is not only visually appealing but also optimized for performance and conversions.</p>
-        <p>From responsive design to seamless user experiences, we focus on delivering high-quality solutions that drive results. Let us help you establish a strong online presence with a website that truly represents your brand.</p>
-        <a href="index.html" class="btn">Back to Home</a>
+        <p>Your website is often the first impression potential customers have of your business. At NexEra Digital, we specialize in creating custom websites that not only look great but also drive results.</p>
+        <p>Our team is dedicated to building websites that are user-friendly, responsive, and optimized for search engines. We ensure your site is tailored to meet your specific business needs and objectives.</p>
+
+        <h2>Why Choose Us?</h2>
+        <div class="why-choose-us">
+            <div class="reason">
+                <h3>Custom Solutions</h3>
+                <p>We don’t believe in one-size-fits-all. Our team works closely with you to create a website that reflects your brand and meets your unique needs.</p>
+            </div>
+            <div class="reason">
+                <h3>Responsive Design</h3>
+                <p>Our websites are designed to perform seamlessly on all devices, ensuring a great user experience for your visitors, whether on desktop or mobile.</p>
+            </div>
+            <div class="reason">
+                <h3>SEO Optimized</h3>
+                <p>All our websites are built with SEO best practices in mind, helping you rank higher on search engines and reach a larger audience.</p>
+            </div>
+            <div class="reason">
+                <h3>Ongoing Support</h3>
+                <p>We provide continuous support and maintenance to ensure your website stays updated and functions smoothly at all times.</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Get Started Today!</h2>
+            <p>Are you ready to elevate your online presence? Contact us today to discuss your website development needs and how we can help!</p>
+            <a href="index.html#contact" class="btn">Contact Us</a>
+        </div>
     </section>
 
     <!-- Footer -->
