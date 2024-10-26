@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Advertising - NexEra Digital</title>
+    <title>NexEra Digital</title>
     <style>
         /* General styles */
         body, html {
@@ -11,131 +11,183 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #000;
-            color: #00e5ff; /* General text color */
+            color: #00e5ff; /* Set general text color */
             height: 100%;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         /* Header */
         header {
             background-color: #000;
-            padding: 10px 0;
+            padding: 10px 0; /* Reduced padding */
             position: fixed;
             width: 100%;
             z-index: 1000;
+        }
+
+        .header-content {
             display: flex;
-            justify-content: center; /* Center the navigation */
+            justify-content: space-between;
             align-items: center;
+            padding: 0 20px; /* Add padding for responsiveness */
         }
 
         .logo {
             color: #00e5ff;
-            font-size: 24px;
+            font-size: 24px; /* Reduced font size */
             font-weight: bold;
-            margin-right: auto; /* Ensure logo is aligned to the left */
-            padding-left: 20px; /* Optional padding for left alignment */
         }
 
         nav {
-            margin-left: auto;
-            margin-right: auto; /* Center the nav */
+            margin-left: auto; /* Pushes nav to the right */
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             display: flex;
-            gap: 30px; /* Space between links */
         }
 
         nav ul li {
-            list-style: none;
+            margin-left: 30px; /* Spacing between the nav items */
         }
 
         nav ul li a {
             color: #00e5ff;
             text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s ease;
+            font-size: 16px; /* Reduced font size */
         }
 
         nav ul li a:hover {
             color: #1ae5ff;
         }
 
-        /* Section styles */
-        .section {
-            padding: 120px 20px 20px; /* Adjusted top padding to prevent overlap */
+        /* Home Section (Static Background Image) */
+        #home {
+            background-image: url('https://i.pinimg.com/originals/a2/c0/b3/a2c0b3bb08bcfd30407eda69b1f77e15.jpg');
+            background-size: cover; /* Ensures image covers full section */
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            max-width: 800px;
-            margin: auto;
         }
 
+        .text {
+            color: #00e5ff; /* Changed to #00e5ff */
+            font-size: 48px;
+            font-weight: bold;
+            padding: 0 20px; /* Adds responsive padding */
+            text-shadow: 2px 2px 0 #000,  /* Black outline */
+                         -2px -2px 0 #000,
+                         2px -2px 0 #000,
+                         -2px 2px 0 #000;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 20px; /* Slightly reduced padding */
+            text-align: center;
+            max-width: 90%; /* Centers the section better */
+            margin: auto;
+        }
+        
         h2 {
-            font-size: 28px;
+            font-size: 36px;
             color: #1ae5ff;
             margin-bottom: 20px;
         }
-
+        
         p {
             font-size: 18px;
             line-height: 1.6;
+        }
+        
+        /* Services Grid */
+        .service-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .service-item {
+            background-color: #111;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+            width: 250px;
+        }
+        
+        .service-item h3 {
+            font-size: 24px;
+            color: #1ae5ff;
+        }
+        
+        .service-item p {
             margin: 15px 0;
         }
-
-        /* Features List */
-        .features {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-        }
-
-        .features li {
-            background: #222;
-            margin: 10px 0;
-            padding: 15px;
+        
+        .btn {
+            display: inline-block;
+            background-color: #00e5ff;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
             border-radius: 5px;
         }
-
-        /* Call to Action */
-        .cta {
+        
+        .btn:hover {
+            background-color: #1ae5ff;
+        }
+        
+        /* Contact Form */
+        form input, form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        form button {
             background-color: #00e5ff;
             color: #000;
             padding: 15px 30px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
         }
-
-        .cta:hover {
+        
+        form button:hover {
             background-color: #1ae5ff;
         }
-
+        
         /* Footer */
         footer {
             text-align: center;
             padding: 20px;
             background-color: #111;
-            margin-top: 40px;
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
     <header>
-        <h1 class="logo">NexEra Digital</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
+        <div class="header-content">
+            <h1 class="logo">NexEra Digital</h1>
+            <nav>
+                <ul>
+                    <
     <!-- Google Advertising Services Content Section -->
     <section class="section">
         <h2>Google Advertising</h2>
