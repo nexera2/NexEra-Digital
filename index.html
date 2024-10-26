@@ -1,6 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexEra Digital</title>
+<style>
+/* General Styles */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000; /* Background color to match the dark theme */
+    color: #00e5ff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.text {
+    color: #00e5ff;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 0 20px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+}
+
+h2 {
+    font-size: 36px;
+    color: #1ae5ff;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Services Grid */
+.service-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #111;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    color: #1ae5ff;
+}
+
+.service-item p {
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #00e5ff;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #1ae5ff;
+}
+
+/* Contact Form */
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    background-color: #00e5ff;
+    color: #000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #1ae5ff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #00e5ff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header>
+<div class="header-content">
+<h1 class="logo">NexEra Digital</h1>
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+</div>
+</header>
+
+<!-- Home Section (Static Background Image) -->
+<section id="home">
+<div class="text">Welcome to NexEra Digital</div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="section">
+<div class="container">
+<h2>About NexEra Digital</h2>
+<p>We are a digital marketing agency offering a full suite of services to help you succeed in the online world. Our team specializes in Social Media Management, Website Development, SEO, and more.</p>
+</div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="section">
+<div class="container">
+<h2>Our Services</h2>
+<div class="service-grid">
+    <div class="service-item">
+        <h3>Social Media Management</h3>
+        <p>Grow your brand on social media with tailored strategies and engaging content.</p>
+        <a href="social-media-management.html" class="btn">Learn More</a>
+    </div>
+    <div class="service-item">
+        <h3>Social Media Marketing</h3>
+        <p>Enhance your online presence with targeted marketing strategies across various platforms.</p>
+        <a href="social-media-marketing.html" class="btn">Learn More</a>
+    </div>
+    <div class="service-item">
+        <h3>Website Development</h3>
+        <p>Custom-built websites designed to meet your business needs and drive conversions.</p>
+        <a href="website-development.html" class="btn">Learn More</a>
+    </div>
+    <div class="service-item">
+        <h3>Website Hosting</h3>
+        <p>Reliable and secure hosting solutions to keep your website running smoothly.</p>
+        <a href="website-hosting.html" class="btn">Learn More</a>
+    </div>
+    <div class="service-item">
+        <h3>SEO Services</h3>
+        <p>Enhance your online visibility and rank higher on search engines with effective SEO strategies.</p>
+        <a href="seo-services.html" class="btn">Learn More</a>
+    </div>
+    <div class="service-item">
+        <h3>Google Advertising</h3>
+        <p>Maximize your return on investment with targeted Google Ads campaigns tailored to your audience.</p>
+        <a href="google-ads.html" class="btn">Learn More</a>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="section">
+<div class="container">
+<h2>Contact Us</h2>
+<p>We'd love to hear from you! Reach out to us for any inquiries.</p>
+<form action="https://formspree.io/f/mqakeaoe" method="POST">
+    <label>
+        Your email:
+        <input type="email" name="email" required>
+    </label>
+    <label>
+        Your message:
+        <textarea name="message" required></textarea>
+    </label>
+    <button type="submit">Send</button>
+</form>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<p>&copy; 2024 NexEra Digital | All Rights Reserved</p>
+</div>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Development & Hosting | NexEra Digital</title>
