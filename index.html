@@ -243,11 +243,16 @@
         <div class="container">
             <h2>Contact Us</h2>
             <p>We'd love to hear from you! Reach out to us for any inquiries.</p>
-            <form action="submit_contact.php" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+            <form action="https://formspree.io/f/mqakeaoe" method="POST">
+                <label>
+                    Your email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message" required></textarea>
+                </label>
+                <button type="submit">Send</button>
             </form>
         </div>
     </section>
