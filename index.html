@@ -114,10 +114,8 @@
         /* Services Grid */
         .service-grid {
             display: flex;
-            justify-content: space-between; /* Adjusted for better spacing */
+            justify-content: space-around;
             flex-wrap: wrap;
-            margin: 0 auto; /* Center the grid */
-            max-width: 1200px; /* Max width for the grid */
         }
         
         .service-item {
@@ -125,18 +123,12 @@
             padding: 20px;
             margin: 15px;
             border-radius: 10px;
-            width: calc(33.333% - 30px); /* Three items per row with margins considered */
-            box-sizing: border-box; /* Ensures padding/margin are included in width */
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center align items */
-            text-align: center; /* Center text */
+            width: 250px;
         }
         
         .service-item h3 {
             font-size: 24px;
             color: #1ae5ff;
-            margin-bottom: 10px; /* Spacing below the heading */
         }
         
         .service-item p {
@@ -150,7 +142,6 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: auto; /* Push button to the bottom of the item */
         }
         
         .btn:hover {
@@ -185,6 +176,18 @@
             padding: 20px;
             background-color: #111;
         }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            .service-grid {
+                display: block; /* Stacks the services vertically */
+            }
+
+            .service-item {
+                margin: 15px auto; /* Center the items */
+                width: 90%; /* Make the items wider on mobile */
+            }
+        }
     </style>
 </head>
 
@@ -211,14 +214,15 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About NexEra Digital</h2>
-            <p>Welcome to NexEra Digital, where your online success is our top priority! In today’s digital landscape, having a strong online presence is not just an option—it's a necessity. We are a forward-thinking digital marketing agency dedicated to empowering businesses like yours to thrive in the competitive online world. </p>
-            <p>Our team of passionate experts specializes in a comprehensive range of services, including Social Media Management, Website Development, SEO, and Email Marketing. We understand that every brand is unique, and we tailor our strategies to meet your specific needs and goals. Whether you're looking to increase brand awareness, drive more traffic to your website, or convert visitors into loyal customers, we have the tools and expertise to make it happen.</p>
-            <p>With our cutting-edge techniques and data-driven approach, we help you navigate the complexities of digital marketing, ensuring that you stand out in a crowded marketplace. Don't let your competitors leave you behind; let us elevate your brand and maximize your online potential. At NexEra Digital, we don't just deliver services—we deliver results that make a real impact on your bottom line. Join us on this journey to digital success and discover how we can transform your vision into reality!</p>
-        </div>
-    </section>
+<section id="about" class="section">
+    <div class="container">
+        <h2>About NexEra Digital</h2>
+        <p>Welcome to NexEra Digital, where your online success is our top priority! In today’s digital landscape, having a strong online presence is not just an option—it's a necessity. We are a forward-thinking digital marketing agency dedicated to empowering businesses like yours to thrive in the competitive online world. </p>
+        <p>Our team of passionate experts specializes in a comprehensive range of services, including Social Media Management, Website Development, SEO, and Email Marketing. We understand that every brand is unique, and we tailor our strategies to meet your specific needs and goals. Whether you're looking to increase brand awareness, drive more traffic to your website, or convert visitors into loyal customers, we have the tools and expertise to make it happen.</p>
+        <p>With our cutting-edge techniques and data-driven approach, we help you navigate the complexities of digital marketing, ensuring that you stand out in a crowded marketplace. Don't let your competitors leave you behind; let us elevate your brand and maximize your online potential. At NexEra Digital, we don't just deliver services—we deliver results that make a real impact on your bottom line. Join us on this journey to digital success and discover how we can transform your vision into reality!</p>
+    </div>
+</section>
+
 
     <!-- Services Section -->
     <section id="services" class="section">
@@ -263,24 +267,19 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact Us</h2>
-            <p>We'd love to hear from you! Reach out to us for any inquiries.</p>
-            <form action="https://formspree.io/f/mqakeaoe" method="POST">
-                <label>
-                    Your email:
-                    <input type="email" name="email" required>
-                </label>
-                <label>
-                    Your message:
-                    <textarea name="message" required></textarea>
-                </label>
-                <button type="submit">Send</button>
+            <form action="#">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 NexEra Digital | All Rights Reserved</p>
+        <p>&copy; 2024 NexEra Digital. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
