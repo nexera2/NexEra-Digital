@@ -131,12 +131,19 @@
             background-color: #1ae5ff;
         }
 
-        /* Home Icon */
-        .home-icon {
-            display: inline-block;
-            margin-top: 20px;
+        /* Back Arrow */
+        .back-arrow {
+            position: fixed;
+            top: 10px;
+            left: 20px;
             font-size: 24px;
+            color: #00e5ff;
+            text-decoration: none;
             cursor: pointer;
+        }
+
+        .back-arrow:hover {
+            color: #1ae5ff;
         }
     </style>
 </head>
@@ -156,6 +163,9 @@
             </nav>
         </div>
     </header>
+
+    <!-- Back Arrow -->
+    <a href="index.html" class="back-arrow">←</a> <!-- Redirects to homepage -->
 
     <!-- Content Section -->
     <section class="content">
@@ -196,9 +206,6 @@
         <h2>Ready to Transform Your Social Media Strategy?</h2>
         <p>Don’t miss out on the opportunity to engage your audience and grow your brand. Contact us today!</p>
         <a href="index.html#contact" class="btn">Contact Us</a> <!-- Redirects to contact section on homepage -->
-
-        <!-- Home Icon -->
-        <a href="index.html" class="home-icon">🏠</a> <!-- Redirects to homepage -->
     </section>
 
     <!-- Footer -->
