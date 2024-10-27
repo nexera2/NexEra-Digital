@@ -75,6 +75,18 @@
             color: #1ae5ff;
         }
 
+ /* Hover Effect for Header Buttons */
+nav ul li a {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
+}
+
+nav ul li a:hover {
+    background-color: #1ae5ff;
+    color: #000; /* Change text color to black on hover */
+    padding: 5px;
+    border-radius: 5px;
+}
+
         /* Home Section (Static Background Image) */
         #home {
             background-image: url('https://i.pinimg.com/originals/a2/c0/b3/a2c0b3bb08bcfd30407eda69b1f77e15.jpg');
@@ -149,6 +161,7 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         
         .btn:hover {
@@ -171,6 +184,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         
         form button:hover {
@@ -260,48 +274,58 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <h3>Social Media Management</h3>
-                    <p>Grow your brand on social media with tailored strategies and engaging content.</p>
-                    <a href="social-media-management.html" class="btn">Learn More</a>
-                </div>
-                <div class="service-item">
-                    <h3>Social Media Marketing</h3>
-                    <p>Enhance your online presence with targeted marketing strategies across various platforms.</p>
-                    <a href="social-media-marketing.html" class="btn">Learn More</a>
-                </div>
-                <div class="service-item">
-                    <h3>Website Development</h3>
-                    <p>Create a stunning, user-friendly website that reflects your brand's identity.</p>
-                    <a href="website-development.html" class="btn">Learn More</a>
-                </div>
-                <div class="service-item">
-                    <h3>SEO Services</h3>
-                    <p>Boost your visibility on search engines and attract more organic traffic.</p>
-                    <a href="seo-services.html" class="btn">Learn More</a>
-                </div>
-                <div class="service-item">
-                    <h3>Email Marketing</h3>
-                    <p>Connect with your audience through effective email campaigns that drive engagement.</p>
-                    <a href="email-marketing.html" class="btn">Learn More</a>
-                </div>
+  <!-- Services Section -->
+<section id="services" class="section">
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Social Media Marketing</h3>
+                <p>Grow your brand with custom social media strategies tailored to your audience.</p>
+                <a href="social-media-marketing.html" class="btn">Learn More</a> <!-- Update link -->
+            </div>
+            <div class="service-item">
+                <h3>SEO Services</h3>
+                <p>Boost your visibility and rankings with our proven SEO techniques.</p>
+                <a href="seo-services.html" class="btn">Learn More</a> <!-- Update link -->
+            </div>
+            <div class="service-item">
+                <h3>Email Marketing</h3>
+                <p>Increase engagement with targeted email campaigns designed to convert.</p>
+                <a href="email-marketing.html" class="btn">Learn More</a> <!-- Update link -->
+            </div>
+            <div class="service-item">
+                <h3>Content Creation</h3>
+                <p>Engaging content tailored to your brand that resonates with your audience.</p>
+                <a href="content-creation.html" class="btn">Learn More</a> <!-- Update link -->
+            </div>
+            <div class="service-item">
+                <h3>Google Advertising</h3>
+                <p>Drive targeted traffic with expertly managed Google Ads campaigns.</p>
+                <a href="google-advertising.html" class="btn">Learn More</a> <!-- Update link -->
+            </div>
+            <div class="service-item">
+                <h3>Social Media Management</h3>
+                <p>Manage your social media platforms effectively to engage and grow your audience.</p>
+                <a href="social-media-management.html" class="btn">Learn More</a> <!-- Update link -->
+            </div>
+            <div class="service-item">
+                <h3>Website Development</h3>
+                <p>Create stunning, responsive websites tailored to your brand’s needs.</p>
+                <a href="website-development.html" class="btn">Learn More</a> <!-- Update link -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Us Section -->
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact Us</h2>
-            <form action="submit_form.php" method="post">
+            <form action="/submit" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -309,17 +333,17 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 NexEra Digital. All rights reserved.</p>
+        <p>&copy; 2024 NexEra Digital. All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript for Mobile Menu Toggle -->
     <script>
         const hamburger = document.getElementById('hamburger');
         const nav = document.getElementById('nav');
 
         hamburger.addEventListener('click', () => {
-            nav.classList.toggle('active'); // Toggles the active class on nav
+            nav.classList.toggle('active');
         });
     </script>
-
 </body>
 </html>
