@@ -44,6 +44,13 @@
             font-weight: bold;
         }
 
+        .hamburger {
+            display: none; /* Hidden by default */
+            font-size: 24px; /* Size of the hamburger icon */
+            cursor: pointer;
+            color: #00e5ff;
+        }
+
         nav {
             margin-left: auto; /* Pushes nav to the right */
         }
@@ -187,6 +194,35 @@
                 margin: 15px auto; /* Center the items */
                 width: 90%; /* Make the items wider on mobile */
             }
+
+            .hamburger {
+                display: block; /* Show hamburger on mobile */
+            }
+
+            nav {
+                display: none; /* Hide navigation by default on mobile */
+                width: 100%; /* Full width */
+                flex-direction: column; /* Stack vertically */
+                position: absolute; /* Positioning */
+                top: 60px; /* Below header */
+                left: 0;
+                background-color: #000; /* Background color for menu */
+                z-index: 999; /* Ensures it appears above other elements */
+            }
+
+            nav.active {
+                display: flex; /* Show navigation when active */
+            }
+
+            nav ul {
+                width: 100%; /* Make ul take full width */
+            }
+
+            nav ul li {
+                margin: 0; /* Remove margins for stacked items */
+                padding: 15px; /* Add padding to list items */
+                text-align: center; /* Center align text */
+            }
         }
     </style>
 </head>
@@ -197,7 +233,8 @@
     <header>
         <div class="header-content">
             <h1 class="logo">NexEra Digital</h1>
-            <nav>
+            <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger Icon -->
+            <nav id="nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
@@ -214,15 +251,14 @@
     </section>
 
     <!-- About Us Section -->
-<section id="about" class="section">
-    <div class="container">
-        <h2>About NexEra Digital</h2>
-        <p>Welcome to NexEra Digital, where your online success is our top priority! In today’s digital landscape, having a strong online presence is not just an option—it's a necessity. We are a forward-thinking digital marketing agency dedicated to empowering businesses like yours to thrive in the competitive online world. </p>
-        <p>Our team of passionate experts specializes in a comprehensive range of services, including Social Media Management, Website Development, SEO, and Email Marketing. We understand that every brand is unique, and we tailor our strategies to meet your specific needs and goals. Whether you're looking to increase brand awareness, drive more traffic to your website, or convert visitors into loyal customers, we have the tools and expertise to make it happen.</p>
-        <p>With our cutting-edge techniques and data-driven approach, we help you navigate the complexities of digital marketing, ensuring that you stand out in a crowded marketplace. Don't let your competitors leave you behind; let us elevate your brand and maximize your online potential. At NexEra Digital, we don't just deliver services—we deliver results that make a real impact on your bottom line. Join us on this journey to digital success and discover how we can transform your vision into reality!</p>
-    </div>
-</section>
-
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About NexEra Digital</h2>
+            <p>Welcome to NexEra Digital, where your online success is our top priority! In today’s digital landscape, having a strong online presence is not just an option—it's a necessity. We are a forward-thinking digital marketing agency dedicated to empowering businesses like yours to thrive in the competitive online world. </p>
+            <p>Our team of passionate experts specializes in a comprehensive range of services, including Social Media Management, Website Development, SEO, and Email Marketing. We understand that every brand is unique, and we tailor our strategies to meet your specific needs and goals. Whether you're looking to increase brand awareness, drive more traffic to your website, or convert visitors into loyal customers, we have the tools and expertise to make it happen.</p>
+            <p>With our cutting-edge techniques and data-driven approach, we help you navigate the complexities of digital marketing, ensuring that you stand out in a crowded marketplace. Don't let your competitors leave you behind; let us elevate your brand and maximize your online potential. At NexEra Digital, we don't just deliver services—we deliver results that make a real impact on your bottom line. Join us on this journey to digital success and discover how we can transform your vision into reality!</p>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="section">
@@ -241,23 +277,18 @@
                 </div>
                 <div class="service-item">
                     <h3>Website Development</h3>
-                    <p>Custom-built websites designed to meet your business needs and drive conversions.</p>
+                    <p>Create a stunning, user-friendly website that reflects your brand's identity.</p>
                     <a href="website-development.html" class="btn">Learn More</a>
                 </div>
                 <div class="service-item">
-                    <h3>Email Marketing</h3>
-                    <p>Reach your audience effectively with targeted email campaigns that drive engagement.</p>
-                    <a href="email-marketing.html" class="btn">Learn More</a>
-                </div>
-                <div class="service-item">
                     <h3>SEO Services</h3>
-                    <p>Enhance your online visibility and rank higher on search engines with effective SEO strategies.</p>
+                    <p>Boost your visibility on search engines and attract more organic traffic.</p>
                     <a href="seo-services.html" class="btn">Learn More</a>
                 </div>
                 <div class="service-item">
-                    <h3>Google Advertising</h3>
-                    <p>Maximize your return on investment with targeted Google Ads campaigns tailored to your audience.</p>
-                    <a href="google-ads.html" class="btn">Learn More</a>
+                    <h3>Email Marketing</h3>
+                    <p>Connect with your audience through effective email campaigns that drive engagement.</p>
+                    <a href="email-marketing.html" class="btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -267,10 +298,10 @@
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact Us</h2>
-            <form action="#">
+            <form action="submit_form.php" method="post">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
@@ -280,6 +311,15 @@
     <footer>
         <p>&copy; 2024 NexEra Digital. All rights reserved.</p>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active'); // Toggles the active class on nav
+        });
+    </script>
 
 </body>
 </html>
