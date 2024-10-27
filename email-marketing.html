@@ -40,6 +40,39 @@
             font-weight: bold;
         }
 
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+    display: inline-block;
+    background-color: #00e5ff; /* Button background color */
+    color: #000; /* Button text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.btn:hover {
+    background-color: #1ae5ff; /* Change background color to a lighter blue on hover */
+    color: #000; /* Ensure text remains black on hover */
+}
+
+nav a {
+    color: #00e5ff; /* Default color for navigation links */
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav a:hover {
+    color: #000; /* Change text color to black on hover */
+    background-color: rgba(26, 229, 255, 0.2); /* Optional: add a light background on hover */
+}
+
         .content {
             padding: 80px 20px;
             margin-top: 80px;
@@ -102,12 +135,20 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <header>
-        <div class="header-content">
-            <h1 class="logo">NexEra Digital</h1>
-        </div>
-    </header>
+   <!-- Navigation Bar -->
+<header>
+    <div class="header-content">
+        <h1 class="logo">NexEra Digital</h1>
+        <nav>
+            <ul style="list-style-type: none; display: flex; gap: 15px; padding: 0;">
+                <li><a href="index.html" class="btn">Home</a></li>
+                <li><a href="services.html" class="btn">Services</a></li>
+                <li><a href="about.html" class="btn">About Us</a></li>
+                <li><a href="contact.html" class="btn">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <!-- Content Section -->
     <div class="container">
@@ -135,6 +176,7 @@
                 <h2>Ready to Boost Your Email Marketing?</h2>
                 <p>Contact us today to discuss how we can elevate your email marketing efforts and help you achieve your business goals!</p>
                 <a href="index.html#contact" class="btn">Contact Us</a>
+                <a href="index.html#services" class="btn" style="margin-left: 10px;">Back to Home</a>
             </div>
         </section>
     </div>
